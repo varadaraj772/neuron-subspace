@@ -1,0 +1,29 @@
+Title: Neurons or Subspaces? Calibration-Sensitive Refusal in Open Instruction Models
+
+Author: Varadaraj Acharya
+Email: varadaraj277@gmail.com
+Affiliation: Independent Researcher, Udupi, Karnataka, India
+
+Keywords: refusal, mechanistic interpretability, activation steering, calibration,
+safety alignment
+
+Abstract:
+Safety-aligned language models refuse harmful requests, but the mechanism is
+contested: is refusal implemented by a sparse set of MLP neurons, or by a linear
+direction in the residual stream? We study this question on four open instruction
+models using minimally paired harmful/benign prompts from JailbreakBench, a brutal
+HarmBench transfer set, and a content-matched style control. Ablating a
+mean-difference direction removes refusal in Qwen3.5-0.8B (53.3% to 0.0%) and
+DeepSeek-R1-Distill-1.5B (26.7% to 6.7%), and transfers to HarmBench (42.0% to
+0.0% and 31.1% to 6.7%). LFM3-1.7B is calibration-sensitive: the matched direction
+reduces refusal only from 86.7% to 73.3%, while a direction estimated on a larger
+natural corpus reaches 82.0% to 21.0% at a KL cost of 1.05. Qwen3.5-4B is the
+strongest refusal model and the hardest case: 96.7% to 50.0% at KL 1.16, with
+HarmBench 93.3% to 42.0%. Removing the direction at a single layer is much weaker
+than removing it at every layer, so the effect is distributed rather than
+localised. Neuron clamping is model-dependent: 80 neurons across four layers reduce
+refusal to 20.0% in Qwen3.5-0.8B, leave R1-Distill unchanged at 26.7%, reduce LFM3
+to 36.7%, and leave Qwen3.5-4B at 96.7%. Adding the direction induces refusal but at
+a large distribution cost (KL up to 4.45). We conclude that refusal is a
+distributed, calibration-sensitive linear mechanism, not a single neuron, and not a
+universal layer or direction.

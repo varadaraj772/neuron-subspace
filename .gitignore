@@ -4,3 +4,13 @@ __pycache__/
 *.pyc
 .DS_Store
 data/*.incomplete
+FINAL_REPORT.md
+results*/*/qualitative.md
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/main.pdf

@@ -1,0 +1,33 @@
+Dear Editors of the Journal of Machine Learning Research,
+
+I am pleased to submit the manuscript "Neurons or Subspaces? Calibration-Sensitive
+Refusal in Open Instruction Models" for consideration for publication in JMLR.
+
+The paper asks whether refusal in instruction-tuned language models is implemented
+by a sparse set of MLP neurons or by a linear direction in the residual stream. It
+makes four contributions:
+
+1. A minimally paired evaluation (JailbreakBench) that removes the
+   imperative-vs-question and topic confounds of the usual AdvBench-vs-Alpaca
+   design, with a content-matched style direction as a negative control.
+2. Evidence that the refusal direction is calibration-sensitive: it is strong in
+   Qwen3.5-0.8B and R1-Distill, but in LFM3-1.7B the matched direction is weak
+   while a natural-corpus direction is strong at a higher KL cost.
+3. A brutal external test on HarmBench, where a direction estimated on moderate
+   pairs ablates refusal in three of four models.
+4. A neuron-budget study showing that single-layer top-k clamping is weak
+   everywhere, while 80 neurons across four layers can substantially reduce refusal
+   in some models and not others.
+
+The manuscript is original, has not been published previously, and is not under
+consideration at another venue. The author declares no competing interests. The
+code, prompts, and result artifacts are available at
+https://github.com/varadaraj772/neuron-subspace.
+
+Thank you for your consideration.
+
+Sincerely,
+Varadaraj Acharya
+Independent Researcher
+Udupi, Karnataka, India
+varadaraj277@gmail.com

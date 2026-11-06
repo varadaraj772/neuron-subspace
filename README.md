@@ -43,7 +43,6 @@ For each model:
    four-layer clamp.
 6. **Controls** — a random unit direction of the same norm (ablation and addition);
    single-layer vs all-layer ablation.
-7. **Coherence** — repetition and distinct-bigram scores on generated text.
 
 ## Setup
 
@@ -98,15 +97,15 @@ results/<model>/
   summary.json        full metrics
   layer_sweep.csv     validation sweep
   neurons.csv         top-k vs random-k
-  qualitative.md      generation samples
+results_hybrid/<model>/   calibration-sensitivity run
 results/summary_all.csv
-FINAL_REPORT.md
+paper/main.pdf
 ```
 
 ## Method notes
 
 - Refusal is the log-odds that the next token belongs to a refusal-initiating set
-  (`I`, `As`, `Sorry`, `No`), plus a normalised string classifier on generations.
+  (`I`, `As`, `Sorry`, `No`).
 - A binary refusal rate is `P(refusal token) > 0.5`; Wilson 95% intervals are
   reported.
 - The addition coefficient is `multiplier × ||mean-difference||`, matching

@@ -1,0 +1,663 @@
+{
+  "model": "models/qwen35_4b",
+  "tag": "Qwen3.5-4B",
+  "family": "qwen3_5",
+  "n_layers": 32,
+  "d_model": 2560,
+  "d_mlp": 9216,
+  "refusal_token_ids": [
+    40,
+    2053,
+    2665,
+    18572
+  ],
+  "split": {
+    "calib": 50,
+    "val": 20,
+    "test": 30,
+    "test_source": "jbb"
+  },
+  "device": "mps",
+  "dtype": "float16",
+  "seed": 0,
+  "direction_norms": [
+    0.0196,
+    0.0528,
+    0.0861,
+    0.2756,
+    0.3925,
+    0.4026,
+    0.4585,
+    0.7565,
+    0.9154,
+    1.1665,
+    1.9251,
+    2.3182,
+    2.5402,
+    2.8485,
+    3.255,
+    4.0316,
+    4.6546,
+    5.1574,
+    6.3432,
+    8.2352,
+    9.184,
+    10.4644,
+    12.6137,
+    13.3834,
+    14.7903,
+    15.7205,
+    17.8713,
+    18.4801,
+    20.7586,
+    22.7802,
+    25.1343,
+    82.0725
+  ],
+  "val_baseline": {
+    "harmful": {
+      "name": "harmful",
+      "n": 20,
+      "refusal_score_mean": 4.651,
+      "refusal_rate": 0.9,
+      "refusal_rate_ci95": [
+        0.699,
+        0.972
+      ]
+    },
+    "harmless": {
+      "name": "harmless",
+      "n": 20,
+      "refusal_score_mean": -4.2674,
+      "refusal_rate": 0.25,
+      "refusal_rate_ci95": [
+        0.112,
+        0.469
+      ]
+    }
+  },
+  "layer_sweep": [
+    {
+      "layer": 0,
+      "ablation_refusal_score": 4.4003,
+      "steering_refusal_score": -4.2351,
+      "kl_harmless": 0.2877,
+      "direction_norm": 0.0196
+    },
+    {
+      "layer": 1,
+      "ablation_refusal_score": 5.4207,
+      "steering_refusal_score": -4.2199,
+      "kl_harmless": 0.2859,
+      "direction_norm": 0.0528
+    },
+    {
+      "layer": 2,
+      "ablation_refusal_score": 4.9261,
+      "steering_refusal_score": -4.3348,
+      "kl_harmless": 0.0106,
+      "direction_norm": 0.0861
+    },
+    {
+      "layer": 3,
+      "ablation_refusal_score": 3.0836,
+      "steering_refusal_score": -4.2342,
+      "kl_harmless": 0.1511,
+      "direction_norm": 0.2756
+    },
+    {
+      "layer": 4,
+      "ablation_refusal_score": 3.5827,
+      "steering_refusal_score": -4.0038,
+      "kl_harmless": 0.0858,
+      "direction_norm": 0.3925
+    },
+    {
+      "layer": 5,
+      "ablation_refusal_score": 5.2458,
+      "steering_refusal_score": -4.1017,
+      "kl_harmless": 0.0512,
+      "direction_norm": 0.4026
+    },
+    {
+      "layer": 6,
+      "ablation_refusal_score": 4.7501,
+      "steering_refusal_score": -3.7575,
+      "kl_harmless": 0.132,
+      "direction_norm": 0.4585
+    },
+    {
+      "layer": 7,
+      "ablation_refusal_score": 2.8716,
+      "steering_refusal_score": -2.0798,
+      "kl_harmless": 0.1295,
+      "direction_norm": 0.7565
+    },
+    {
+      "layer": 8,
+      "ablation_refusal_score": 1.5228,
+      "steering_refusal_score": -0.9747,
+      "kl_harmless": 0.3527,
+      "direction_norm": 0.9154
+    },
+    {
+      "layer": 9,
+      "ablation_refusal_score": -0.4048,
+      "steering_refusal_score": 0.7854,
+      "kl_harmless": 0.9361,
+      "direction_norm": 1.1665
+    },
+    {
+      "layer": 10,
+      "ablation_refusal_score": -2.2767,
+      "steering_refusal_score": 2.0263,
+      "kl_harmless": 1.8444,
+      "direction_norm": 1.9251
+    },
+    {
+      "layer": 11,
+      "ablation_refusal_score": 1.1074,
+      "steering_refusal_score": 2.6083,
+      "kl_harmless": 0.3355,
+      "direction_norm": 2.3182
+    },
+    {
+      "layer": 12,
+      "ablation_refusal_score": 0.6327,
+      "steering_refusal_score": 2.5624,
+      "kl_harmless": 0.5263,
+      "direction_norm": 2.5402
+    },
+    {
+      "layer": 13,
+      "ablation_refusal_score": 2.7382,
+      "steering_refusal_score": 2.7339,
+      "kl_harmless": 1.6169,
+      "direction_norm": 2.8485
+    },
+    {
+      "layer": 14,
+      "ablation_refusal_score": 0.3991,
+      "steering_refusal_score": 2.9532,
+      "kl_harmless": 0.2899,
+      "direction_norm": 3.255
+    },
+    {
+      "layer": 15,
+      "ablation_refusal_score": 1.0646,
+      "steering_refusal_score": 3.4113,
+      "kl_harmless": 0.6455,
+      "direction_norm": 4.0316
+    },
+    {
+      "layer": 16,
+      "ablation_refusal_score": -0.4117,
+      "steering_refusal_score": 3.504,
+      "kl_harmless": 0.441,
+      "direction_norm": 4.6546
+    },
+    {
+      "layer": 17,
+      "ablation_refusal_score": -0.7936,
+      "steering_refusal_score": 4.2885,
+      "kl_harmless": 0.377,
+      "direction_norm": 5.1574
+    },
+    {
+      "layer": 18,
+      "ablation_refusal_score": -0.8242,
+      "steering_refusal_score": 4.6964,
+      "kl_harmless": 0.663,
+      "direction_norm": 6.3432
+    },
+    {
+      "layer": 19,
+      "ablation_refusal_score": -2.1928,
+      "steering_refusal_score": 4.5848,
+      "kl_harmless": 0.4391,
+      "direction_norm": 8.2352
+    },
+    {
+      "layer": 20,
+      "ablation_refusal_score": -1.7714,
+      "steering_refusal_score": 4.1381,
+      "kl_harmless": 0.5885,
+      "direction_norm": 9.184
+    },
+    {
+      "layer": 21,
+      "ablation_refusal_score": -3.2914,
+      "steering_refusal_score": 4.3002,
+      "kl_harmless": 0.4346,
+      "direction_norm": 10.4644
+    },
+    {
+      "layer": 22,
+      "ablation_refusal_score": -3.2006,
+      "steering_refusal_score": 3.8425,
+      "kl_harmless": 0.9139,
+      "direction_norm": 12.6137
+    },
+    {
+      "layer": 23,
+      "ablation_refusal_score": -4.782,
+      "steering_refusal_score": 3.9568,
+      "kl_harmless": 0.8047,
+      "direction_norm": 13.3834
+    },
+    {
+      "layer": 24,
+      "ablation_refusal_score": -6.0053,
+      "steering_refusal_score": 4.0381,
+      "kl_harmless": 0.9769,
+      "direction_norm": 14.7903
+    },
+    {
+      "layer": 25,
+      "ablation_refusal_score": -5.2272,
+      "steering_refusal_score": 3.6171,
+      "kl_harmless": 0.958,
+      "direction_norm": 15.7205
+    },
+    {
+      "layer": 26,
+      "ablation_refusal_score": -3.5768,
+      "steering_refusal_score": 3.4801,
+      "kl_harmless": 1.4146,
+      "direction_norm": 17.8713
+    },
+    {
+      "layer": 27,
+      "ablation_refusal_score": -6.2096,
+      "steering_refusal_score": 2.9639,
+      "kl_harmless": 1.3975,
+      "direction_norm": 18.4801
+    },
+    {
+      "layer": 28,
+      "ablation_refusal_score": -4.6837,
+      "steering_refusal_score": 2.1151,
+      "kl_harmless": 0.7124,
+      "direction_norm": 20.7586
+    },
+    {
+      "layer": 29,
+      "ablation_refusal_score": -4.9205,
+      "steering_refusal_score": 2.0965,
+      "kl_harmless": 0.7388,
+      "direction_norm": 22.7802
+    },
+    {
+      "layer": 30,
+      "ablation_refusal_score": -5.0977,
+      "steering_refusal_score": 2.4307,
+      "kl_harmless": 0.6078,
+      "direction_norm": 25.1343
+    },
+    {
+      "layer": 31,
+      "ablation_refusal_score": -2.8969,
+      "steering_refusal_score": 7.0901,
+      "kl_harmless": 0.364,
+      "direction_norm": 82.0725
+    }
+  ],
+  "selection": {
+    "layer": 9,
+    "note": "forced layer 9 (sensitivity run)",
+    "ablation_refusal_score": -0.4048,
+    "steering_refusal_score": 0.7854,
+    "kl_harmless": 0.9361,
+    "direction_norm": 1.1665,
+    "baseline_harmless_score": -4.2674
+  },
+  "test": {
+    "baseline_harmful": {
+      "name": "baseline/harmful",
+      "n": 30,
+      "refusal_score_mean": 5.6595,
+      "refusal_rate": 0.9667,
+      "refusal_rate_ci95": [
+        0.833,
+        0.994
+      ]
+    },
+    "baseline_harmless": {
+      "name": "baseline/harmless",
+      "n": 30,
+      "refusal_score_mean": -3.0124,
+      "refusal_rate": 0.2333,
+      "refusal_rate_ci95": [
+        0.118,
+        0.409
+      ]
+    },
+    "ablated_harmful": {
+      "name": "ablated/harmful",
+      "n": 30,
+      "refusal_score_mean": 0.1862,
+      "refusal_rate": 0.5,
+      "refusal_rate_ci95": [
+        0.332,
+        0.668
+      ]
+    },
+    "ablated_harmless": {
+      "name": "ablated/harmless",
+      "n": 30,
+      "refusal_score_mean": -7.4464,
+      "refusal_rate": 0.0667,
+      "refusal_rate_ci95": [
+        0.018,
+        0.213
+      ]
+    },
+    "ablated_kl_harmless": 1.1595,
+    "single_layer_ablation_harmful": {
+      "name": "single-layer/harmful",
+      "n": 30,
+      "refusal_score_mean": 2.8423,
+      "refusal_rate": 0.9,
+      "refusal_rate_ci95": [
+        0.744,
+        0.965
+      ]
+    },
+    "random_direction": {
+      "n_draws": 3,
+      "harmful_score_mean": 5.5681,
+      "harmless_score_mean": -3.0967,
+      "harmless_kl_mean": 0.0045
+    },
+    "addition": [
+      {
+        "name": "add/0.0",
+        "n": 30,
+        "refusal_score_mean": -3.0124,
+        "refusal_rate": 0.2333,
+        "refusal_rate_ci95": [
+          0.118,
+          0.409
+        ],
+        "multiplier": 0.0,
+        "coeff": 0.0,
+        "kl_vs_baseline": 0.0
+      },
+      {
+        "name": "add/0.5",
+        "n": 30,
+        "refusal_score_mean": -0.1931,
+        "refusal_rate": 0.4,
+        "refusal_rate_ci95": [
+          0.246,
+          0.577
+        ],
+        "multiplier": 0.5,
+        "coeff": 0.583,
+        "kl_vs_baseline": 0.3278
+      },
+      {
+        "name": "add/1.0",
+        "n": 30,
+        "refusal_score_mean": 2.0066,
+        "refusal_rate": 0.7333,
+        "refusal_rate_ci95": [
+          0.556,
+          0.858
+        ],
+        "multiplier": 1.0,
+        "coeff": 1.167,
+        "kl_vs_baseline": 1.4284
+      },
+      {
+        "name": "add/1.5",
+        "n": 30,
+        "refusal_score_mean": 3.7086,
+        "refusal_rate": 0.9667,
+        "refusal_rate_ci95": [
+          0.833,
+          0.994
+        ],
+        "multiplier": 1.5,
+        "coeff": 1.75,
+        "kl_vs_baseline": 2.9323
+      },
+      {
+        "name": "add/2.0",
+        "n": 30,
+        "refusal_score_mean": 5.021,
+        "refusal_rate": 1.0,
+        "refusal_rate_ci95": [
+          0.886,
+          1.0
+        ],
+        "multiplier": 2.0,
+        "coeff": 2.333,
+        "kl_vs_baseline": 4.4541
+      }
+    ],
+    "random_addition": {
+      "n_draws": 3,
+      "harmless_score_mean": -3.336,
+      "harmless_kl_mean": 0.0185
+    }
+  },
+  "external": {
+    "n_harmful": 119,
+    "n_benign": 119,
+    "baseline_harmful": {
+      "name": "brutal/baseline",
+      "n": 119,
+      "refusal_score_mean": 4.3542,
+      "refusal_rate": 0.9328,
+      "refusal_rate_ci95": [
+        0.873,
+        0.966
+      ]
+    },
+    "ablated_harmful": {
+      "name": "brutal/ablated",
+      "n": 119,
+      "refusal_score_mean": -0.7931,
+      "refusal_rate": 0.4202,
+      "refusal_rate_ci95": [
+        0.335,
+        0.51
+      ]
+    },
+    "baseline_benign": {
+      "name": "brutal-benign/baseline",
+      "n": 119,
+      "refusal_score_mean": -4.8107,
+      "refusal_rate": 0.1933,
+      "refusal_rate_ci95": [
+        0.132,
+        0.273
+      ]
+    },
+    "ablated_benign": {
+      "name": "brutal-benign/ablated",
+      "n": 119,
+      "refusal_score_mean": -7.9911,
+      "refusal_rate": 0.0252,
+      "refusal_rate_ci95": [
+        0.009,
+        0.072
+      ]
+    },
+    "kl_benign": 0.7529
+  },
+  "style_control": {
+    "n": 50,
+    "cos_with_refusal_direction": -0.2096,
+    "ablation_harmful": {
+      "name": "style-ablation/harmful",
+      "n": 30,
+      "refusal_score_mean": 5.3553,
+      "refusal_rate": 1.0,
+      "refusal_rate_ci95": [
+        0.886,
+        1.0
+      ]
+    },
+    "ablation_harmless": {
+      "name": "style-ablation/harmless",
+      "n": 30,
+      "refusal_score_mean": -0.3745,
+      "refusal_rate": 0.3667,
+      "refusal_rate_ci95": [
+        0.219,
+        0.545
+      ]
+    },
+    "kl_harmless": 0.7312,
+    "baseline_harmful": {
+      "name": "baseline/harmful",
+      "n": 30,
+      "refusal_score_mean": 5.6595,
+      "refusal_rate": 0.9667,
+      "refusal_rate_ci95": [
+        0.833,
+        0.994
+      ]
+    }
+  },
+  "neurons": {
+    "layer": 9,
+    "sweep": [
+      {
+        "k": 1,
+        "frac": 0.0001,
+        "top_refusal_rate": 0.9667,
+        "top_refusal_score": 5.4927,
+        "random_refusal_score": 5.6597
+      },
+      {
+        "k": 5,
+        "frac": 0.0005,
+        "top_refusal_rate": 0.9667,
+        "top_refusal_score": 5.3167,
+        "random_refusal_score": 5.6603
+      },
+      {
+        "k": 20,
+        "frac": 0.0022,
+        "top_refusal_rate": 0.9667,
+        "top_refusal_score": 5.1164,
+        "random_refusal_score": 5.6517
+      },
+      {
+        "k": 100,
+        "frac": 0.0109,
+        "top_refusal_rate": 0.9667,
+        "top_refusal_score": 5.1899,
+        "random_refusal_score": 5.6408
+      },
+      {
+        "k": 460,
+        "frac": 0.0499,
+        "top_refusal_rate": 0.9667,
+        "top_refusal_score": 5.0217,
+        "random_refusal_score": 5.6353
+      },
+      {
+        "k": 500,
+        "frac": 0.0543,
+        "top_refusal_rate": 0.9667,
+        "top_refusal_score": 5.0096,
+        "random_refusal_score": 5.5853,
+        "top_harmless_refusal_rate": 0.2333,
+        "top_kl_harmless": 0.0319,
+        "top_rep": 0.0,
+        "random_harmless_refusal_rate": 0.2667,
+        "random_kl_harmless": 0.0065,
+        "random_rep": 0.0428
+      }
+    ],
+    "multi_layer": [
+      {
+        "name": "neuron/harmful",
+        "n": 30,
+        "refusal_score_mean": 3.4079,
+        "refusal_rate": 0.9667,
+        "refusal_rate_ci95": [
+          0.833,
+          0.994
+        ],
+        "harmless_refusal_rate": 0.1333,
+        "kl_harmless": 0.4622,
+        "total_k": 80,
+        "per_layer": 20,
+        "layers": [
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "name": "neuron/harmful",
+        "n": 30,
+        "refusal_score_mean": 2.5763,
+        "refusal_rate": 0.8,
+        "refusal_rate_ci95": [
+          0.627,
+          0.905
+        ],
+        "harmless_refusal_rate": 0.1,
+        "kl_harmless": 0.9257,
+        "total_k": 1840,
+        "per_layer": 460,
+        "layers": [
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    ],
+    "top10": [
+      {
+        "neuron": 4781,
+        "score": 0.1132
+      },
+      {
+        "neuron": 3322,
+        "score": 0.03107
+      },
+      {
+        "neuron": 6320,
+        "score": 0.00836
+      },
+      {
+        "neuron": 6954,
+        "score": 0.00799
+      },
+      {
+        "neuron": 8967,
+        "score": 0.00795
+      },
+      {
+        "neuron": 2890,
+        "score": 0.00704
+      },
+      {
+        "neuron": 2494,
+        "score": 0.00697
+      },
+      {
+        "neuron": 1420,
+        "score": 0.00674
+      },
+      {
+        "neuron": 4058,
+        "score": 0.00611
+      },
+      {
+        "neuron": 1461,
+        "score": 0.00485
+      }
+    ]
+  },
+  "runtime_sec": 208.9
+}

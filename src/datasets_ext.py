@@ -1,20 +1,8 @@
-"""
-Prompt sets for the refusal study.
+"""Prompt sets for the refusal study.
 
-Primary (matched) set: JailbreakBench JBB-Behaviors.
-  100 harmful / 100 benign prompts, paired by index and category.  The benign
-  counterpart shares the template, topic and length of the harmful prompt, so a
-  mean-difference direction cannot be explained by imperative-vs-question style
-  or by topic alone.  (Chao et al., 2024, arXiv:2404.01318.)
-
-External (brutal) set: HarmBench standard behaviors, excluding copyright.
-  Paired with JBB benign prompts from the mapped category, so both sides are
-  imperative and from the same domain family.  Used only as a held-out transfer
-  test for a direction computed on JBB.
-
-Style control: JBB benign imperatives vs Alpaca questions.  Both harmless; the
-  direction between them is a pure style axis.  Ablating it should not remove
-  refusal if the main effect is harmfulness-specific.
+The matched set is JailbreakBench: 100 harmful/benign pairs that share template,
+topic and length. HarmBench standard behaviors are the brutal external set, and
+the style control renders the same benign prompts as imperatives and questions.
 """
 import csv
 import os
